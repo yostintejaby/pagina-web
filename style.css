@@ -1,0 +1,379 @@
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+html{
+    font-family: 'Cantarell', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.collapsed{
+    display: none;
+}
+
+nav{
+    width: 100%;
+    background: transparent;
+    position: fixed;
+
+}
+
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;	
+
+}
+
+/* NAV MOBILE */
+
+nav .mobile{
+    display: none;
+}
+
+nav .mobile .mobile__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+}
+
+nav .mobile .mobile__header .mobile__logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all .6s ease;
+    
+}
+
+nav .mobile .mobile__header .mobile__logo a:focus{
+    transform: scale(1.2);
+}
+
+nav .mobile .mobile__header .mobile__search{
+    display: flex;
+    gap: 10px;
+}
+
+nav .mobile .mobile__header .mobile__search input{
+    background: rgba(0, 0, 0, .1);
+    max-width: 140px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all .6s ease;
+}
+
+nav .mobile .mobile__header .mobile__search input:focus{
+    background: rgba(0, 0, 0, .3);
+    outline: none;
+    color: #FFFFFF;
+    
+}
+
+nav .mobile .mobile__header .mobile__search input::placeholder{
+    color: #FFFFFF;
+    text-align: center;
+}
+
+nav .mobile .mobile__header .mobile__search button{
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+
+nav .mobile .mobile__header .mobile__search button:focus{
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #FFFFFF;
+}
+
+nav .mobile .mobile__header .mobile__menu button{
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    padding: 5px 0;
+    transition: all .5s ease;
+}
+
+nav .mobile .mobile__header .mobile__menu button:focus{
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #FFFFFF;
+}
+
+nav .mobile .mobile__links{
+    background: rgba(0, 0, 0, .5);
+
+
+}
+
+nav .mobile .mobile__links a:hover{
+    background: rgba(255, 255, 255, 0.5);
+    transition: all .5s ease;
+    color: #000000;
+}
+
+/* NAV DESKTOP */
+
+nav .desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+nav .desktop .desktop__logo a{
+    min-width: 150px;
+    color:#FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all .6s ease;
+    animation: texto-parpadeo 3s linear infinite;
+
+}
+
+
+nav .desktop .desktop__logo a:hover{
+    transform: scale(1.2);
+
+}
+
+nav .desktop .desktop__links,
+nav .desktop .desktop__links-mini{
+    display: flex;
+}
+
+nav .desktop .desktop__links a{
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all .5s ease;
+
+}
+
+nav .desktop .desktop__links a:hover{
+    background: rgba(0, 0, 0, .5);
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+nav .desktop .desktop__links-mini{
+    display: none;
+}
+
+nav .desktop .desktop__search{
+    display: flex;
+    gap: 10px;
+}
+
+nav .desktop .desktop__search input{
+    background: rgba(0, 0, 0, .1);
+    max-width: 150px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all .6s ease;
+}
+
+nav .desktop .desktop__search input:focus{
+    outline: none;
+    background: rgba(0, 0, 0, .3);
+    color: #FFFFFF;
+    
+}
+
+nav .desktop .desktop__search input::placeholder{
+    color: #FFFFFF;
+    text-align: center;
+}
+
+nav .desktop .desktop__search button{
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+
+nav .desktop .desktop__search button:hover{
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #FFFFFF;
+}
+
+@media screen and (max-width: 940px){
+    nav .desktop .desktop__links{
+        display: none;
+    }
+
+    nav .desktop .desktop__links-mini{
+        display: block;
+    }
+
+
+    nav .desktop .desktop__links-mini .submenu{
+        display: none;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        width: 120px;
+        right: 0;
+        overflow: hidden;
+
+    }
+
+    nav .desktop .desktop__links-mini button{
+        border: none;
+        background-color: transparent;
+        color: #FFFFFF;
+        transition: all .5s ease;
+    }
+
+    nav .desktop .desktop__links-mini button:hover{
+        transform: scale(1.2);
+        text-shadow: 0 0 20px #FFFFFF;
+
+    }
+
+
+    nav .desktop .desktop__links-mini:hover .submenu{
+        display: block;
+
+    }
+
+    nav .desktop .desktop__links-mini .submenu a{
+        padding: 10px 15px;
+
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav .desktop{
+        display: none;
+    }
+
+    nav .mobile{
+        display: block;
+    }
+
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4,
+    .container-5{
+        display: none;
+    }
+
+    .container{
+        background-image: url(img/container.jpg);
+        height: 100vh;
+        background-size: cover;
+
+    }
+
+}
+
+.container-1{
+    background-image: url(img/container1.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.container-2{
+    background-image: url(img/container2.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.container-3{
+    background-image: url(img/container3.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.container-4{
+    background-image: url(img/container4.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.container-5{
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    height: 100vh;
+    background-size: cover;
+}
+
+
+
+@keyframes texto-parpadeo {
+    0% {
+      opacity:0.1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    
+    2% {
+      opacity:1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    8% {
+      opacity:0.1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    9% {
+      opacity:1;
+      text-shadow: 0 0 20px #FFFFFF;
+
+    }
+    12% {
+      opacity:0.1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    20% {
+      opacity:1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    25% {
+      opacity:0.3;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    30% {
+      opacity:1;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+
+    50%{
+        opacity: 0.9;
+        text-shadow: 0 0 20px #FFFFFF;
+    }
+    
+    70% {
+      opacity:0.7;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    
+    72% {
+      opacity:0.2;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    
+    77% {
+      opacity:.9;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+    100% {
+      opacity:.9;
+      text-shadow: 0 0 20px #FFFFFF;
+    }
+  }
+
